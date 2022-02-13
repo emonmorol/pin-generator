@@ -30,3 +30,18 @@ document.getElementById('key-pad').addEventListener('click',function(event){
         calcInput.value = newNumber;
     }
 })
+
+function verifyPin(){
+    const pin = document.getElementById('pin-container').value;
+    const typedNumbers = document.getElementById('typed-numbers').value;
+    const successPop = document.getElementById('pin-success');
+    const failError = document.getElementById('pin-fail');
+    if( pin == typedNumbers){
+        successPop.style.display = 'block';
+        failError.style.display = 'none';
+    }
+    else {
+        failError.style.display = 'block';
+        successPop.style.display = 'none';
+    }
+}
